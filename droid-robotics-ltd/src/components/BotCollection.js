@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Bot from "./Bot";
 
+
+function handleDeleteClick() {
+    fetch(`http://localhost:3000/bots/${Bot.id}`, {
+      method: "DELETE",
+    })
+      .then((r) => r.json())
+      .then(() => console.log("deleted!"));
+  }
 export default function BotCollection(){
     const [bots,SetBots] = useState()
 
@@ -20,6 +28,8 @@ export default function BotCollection(){
             <h2>{bot.name}</h2>
             <p>{bot.catchphrase}</p>
             <button>Enlist</button>
+            <button>Release</button>
+            <button>Delete</button>
             </div>
                     )
                 })
