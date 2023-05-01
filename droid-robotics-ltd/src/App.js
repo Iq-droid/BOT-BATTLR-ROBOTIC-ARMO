@@ -5,6 +5,9 @@ import YourBotArmy from "./components/YourBotArmy";
 function App() {
   const [bots, setBots] = useState([]);
   const [army, setArmy] = useState([]);
+  const styles = {
+    backgroundColor: "grey"
+  };
 
   useEffect(() => {
     fetch("http://localhost:3000/bots")
@@ -33,7 +36,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div style={styles}>
       <h1>Bot Army Manager</h1>
       <BotCollection bots={bots} addBotToArmy={addBotToArmy} />
       <YourBotArmy army={army} removeBotFromArmy={removeBotFromArmy} dischargeBot={dischargeBot} />
