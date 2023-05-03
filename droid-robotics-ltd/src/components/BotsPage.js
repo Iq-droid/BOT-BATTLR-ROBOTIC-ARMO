@@ -15,7 +15,7 @@ class BotsPage extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3004/bots')
+    fetch('https://bota.onrender.com/bots')
       .then(response => response.json())
       .then(bots => this.setState({ botCollection: bots, filteredCollection: bots }))
       .then(console.log("Bots Fetched!"))
@@ -49,7 +49,7 @@ class BotsPage extends Component {
 
     this.setState({ botCollection: newCollection, filteredCollection: newFilteredCollection, botArmy: newArmy })
 
-    fetch(`http://localhost:3004/bots/${bot.id}`, {
+    fetch(`https://bota.onrender.com/bots/${bot.id}`, {
       method: 'DELETE'
     }).then(response => response.json())
       .then(result => console.log(result))

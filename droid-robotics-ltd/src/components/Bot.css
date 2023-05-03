@@ -81,8 +81,8 @@
   }
   
   .bot-army-row {
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    /* grid-template-columns: repeat(4, minmax(0, 1fr)); */
     gap: 10px;
   }
   
@@ -91,7 +91,7 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background-color: rgb(255, 192, 203);
+    background-color: rgb(134, 21, 40);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
   
