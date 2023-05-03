@@ -1,0 +1,105 @@
+#card {
+    background-color: aliceblue;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  #range {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .card {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 240, 245);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .delete {
+    background-color: tomato;
+    color: #fff;
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .delete:hover {
+    background-color: crimson;
+  }
+  
+  .enlist {
+    background-color: rgb(135, 206, 235);
+    color: #fff;
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .enlist:hover {
+    background-color: rgb(30, 144, 255);
+  }
+  
+  .goback {
+    background-color: gold;
+    color: #fff;
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .goback:hover {
+    background-color: darkgoldenrod;
+  }
+  
+  .armydisplay {
+    background-color: rgb(240, 255, 240);
+    height: 400px;
+    padding: 20px;
+  }
+  
+  .bot-army {
+    overflow-x: auto;
+    height: 200px;
+  }
+  
+  .bot-army-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  
+  .bot-card {
+    flex: 0 0 auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: rgb(255, 192, 203);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bot-card:hover {
+    transform: scale(1.1);
+  }
+  
+  .bot-name {
+    font-weight: bold;
+    margin-top: 5px;
+  }

@@ -1,40 +1,19 @@
-import React, { Component } from "react";
+import React from 'react';
+import BotCard from "../components/BotCard";
 
-class YourBotArmy extends Component {
-  handleRemoveBotFromArmy = (id) => {
-    const { removeBotFromArmy } = this.props;
-    removeBotFromArmy(id);
-  };
 
-  handleDischargeBot = (id) => {
-    const { dischargeBot } = this.props;
-    dischargeBot(id);
-  };
+function YourBotArmy(props) {
 
-  render() {
-    const { army } = this.props;
+  const displayBots = props.bots.map(bot => {
+    return <BotCard bot={bot} action={props.action} removeCard={props.removeCard} />
+  })
 
-    return (
-      <div>
-        <h2>Your Bot Army</h2>
-        <div className="bot-collection">
-          {army.map((bot) => (
-            <div key={bot.id} className="bot-card">
-              <img src={bot.avatar_url} alt={bot.name} />
-              <h2>{bot.name}</h2>
-              <p>{bot.catchphrase}</p>
-              <button onClick={() => this.handleRemoveBotFromArmy(bot.id)}>
-                Remove from Army
-              </button>
-              <button onClick={() => this.handleDischargeBot(bot.id)}>
-                Discharge
-              </button>
-            </div>
-          ))}
+
+  return (
+
+        <div className="armydisplay">
+          {displayBots}
         </div>
-      </div>
-    );
-  }
+  )
 }
-
 export default YourBotArmy;
